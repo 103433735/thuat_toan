@@ -21,9 +21,18 @@ struct Person_struct {
 
 class Person_class {
 public: //access scope
-    char fullName[30];
+    string fullName;
     int age;
     float height;
+    
+    //Constructor
+    Person_class() { //Hàm khởi tạo mặc định
+        cout << "Created a model" << endl;
+        fullName = "Nguyễn Anh Đức";
+        age = 24;
+        height = 1.65;
+    }
+    
     void getFullName() {
         cout << "Hi there " << fullName << endl;
     }
@@ -35,9 +44,8 @@ int main(int argc, const char * argv[]) {
     person_struct.hello();
     
     
-    Person_class person_class = {"Testing function", 24, 1.54};
+    Person_class person_class;
     cout << person_class.fullName << endl;
-    person_class.getFullName();
     
 }
 
