@@ -43,14 +43,12 @@ public: //access scope
 
 int main(int argc, const char * argv[]) {
     Person_struct person_struct = {"Duc Nguyen",24, 1.99};
-    cout << person_struct.age << endl;
-    person_struct.hello();
+    Person_struct* p = &person_struct;
+    cout << p->fullName <<endl; //Toán tử truy cập từ con trỏ. Struct - Class giống nhau
     
-    
-    Person_class person_class_1 = Person_class("Nguyen", 100, 100);
-    cout << person_class_1.fullName << endl;
-    
-    //
+    //Reference
+    Person_struct& r_person_struct = person_struct;
+    cout << r_person_struct.fullName << endl;
 }
 
 
