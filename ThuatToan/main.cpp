@@ -9,34 +9,24 @@
 using namespace std;
 
 //Template
-template <typename T>
-struct Point_struct {
-    T x;
-    T y;
-    
-    void showPoint() {
-        cout << "Type: " << typeid(T).name() << endl;
-    }
+template <typename T1, typename T2> //Template function
+void printing() {
+    cout << "Type 1: " << typeid(T1).name() << endl;
+    cout << "Type 2: " << typeid(T2).name() << endl;
 };
 
-template <typename T>
-class Point_class {
-public:
-    T x;
-    T y;
+template <typename T, int lenght>
+struct ABC {
+    T a[lenght];
 };
+
 
 int main(int argc, const char * argv[]) {
-    Point_struct<int> point_struct;
-    point_struct.x = 10;
-    point_struct.y = 20;
+    printing<int, bool>();
     
-    Point_class<float> point_class;
-    point_class.x = 30;
-    point_class.y = 40;
+    ABC<int, 100> array;
     
-    // Gọi hàm bên trong struct với kiểu dữ liệu T
-    point_struct.showPoint();
+    cout << sizeof(array);
 }
 
 
