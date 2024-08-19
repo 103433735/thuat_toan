@@ -27,10 +27,13 @@ public: //access scope
     
     //Constructor
     Person_class() { //Hàm khởi tạo mặc định
+    }
+    
+    Person_class(string fullName, int age, float height) { //Hàm khởi tạo có parameter
         cout << "Created a model" << endl;
-        fullName = "Nguyễn Anh Đức";
-        age = 24;
-        height = 1.65;
+        fullName = fullName;
+        age = age;
+        height = height;
     }
     
     void getFullName() {
@@ -44,8 +47,8 @@ int main(int argc, const char * argv[]) {
     person_struct.hello();
     
     
-    Person_class person_class;
-    cout << person_class.fullName << endl;
+    Person_class person_class_1 = Person_class("Nguyen", 100, 100);
+    cout << person_class_1.fullName << endl;
     
     //
 }
