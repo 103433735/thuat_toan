@@ -10,16 +10,20 @@ using namespace std;
 
 int main(int argc, const char * argv[]) {
     int x = 10;
-    
+    int y = 20;
     int* p = &x;
     
-    //* : Toán tử truy cập
-    // nếu cout << p --> In ra địa chỉ mà biến p đang lưu trữ
-    // nếu cout << *p --> Truy cập vào biến p trước --> in ra giá trị mà biến p đang tham chiếu
+    //Gán lại pointer bằng một địa chỉ khác
+    p = &y;
     
-    cout << *p << endl; //In ra giá trị của vùng dữ liệu đó
-
-    *p = 100;
+    cout << *p << endl ;
+    int* q = p;
+    cout << *q << endl ;
+    
+    //Biến con trỏ 2 chiều
+    int** qq = &q;
+    cout << **qq << endl;
+    
 }
 
 
