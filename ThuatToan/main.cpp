@@ -8,24 +8,15 @@
 #include <iostream>
 using namespace std;
 
-
-//Typedef
-typedef string str;
-
-//Alias
-using normString = string;
-
+//Template
+template <typename T>
+void hello() {
+    cout << "Type: " << typeid(T).name() << endl;
+    cout << "Size: " << sizeof(T) << " bytes" << endl;
+}
 
 int main(int argc, const char * argv[]) {
-
-    //Ví dụ:
-    //Khai báo với typedef
-    str randomName = "ádasda";
-    
-    //Khai báo với alias (using namespace)
-    normString randomAge = "100";
-    
-
+    hello<int>();
 }
 
 
