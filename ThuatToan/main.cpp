@@ -20,13 +20,44 @@ struct ABC {
     T a[lenght];
 };
 
+struct Doll {
+    string color;
+    Doll *child;
+};
 
+Doll *big_doll = new Doll({
+    "red",
+    NULL
+});
+
+void countDoll(Doll *doll) {
+    cout << "OPEN DOLL: " << doll->color;
+    if (doll -> child == NULL) {
+        return;
+    } else {
+        countDoll(doll -> child);
+    }
+}
 int main(int argc, const char * argv[]) {
     printing<int, bool>();
     
     ABC<int, 100> array;
     
     cout << sizeof(array);
+    
+    big_doll -> child = new Doll({
+        "green",
+        NULL
+    });
+    big_doll -> child -> child = new Doll({
+        "yellow",
+        NULL
+    });
+    big_doll -> child -> child = new Doll({
+        "blue",
+        NULL
+    });
+    countDoll(big_doll);
 }
 
 
