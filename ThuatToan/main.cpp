@@ -6,58 +6,27 @@
 //
 
 #include <iostream>
+#include <fstream>
+
 using namespace std;
+ifstream input("input.txt");
+ofstream output("output.txt");
 
-//Template
-template <typename T1, typename T2> //Template function
-void printing() {
-    cout << "Type 1: " << typeid(T1).name() << endl;
-    cout << "Type 2: " << typeid(T2).name() << endl;
-};
+int n;
 
-template <typename T, int lenght>
-struct ABC {
-    T a[lenght];
-};
-
-struct Doll {
-    string color;
-    Doll *child;
-};
-
-Doll *big_doll = new Doll({
-    "red",
-    NULL
-});
-
-void countDoll(Doll *doll) {
-    cout << "OPEN DOLL: " << doll->color;
-    if (doll -> child == NULL) {
-        return;
-    } else {
-        countDoll(doll -> child);
-    }
+int sum() {
+    
 }
+
+void solution() {
+    
+}
+
 int main(int argc, const char * argv[]) {
-    printing<int, bool>();
+    string line;
+    input >> n;
     
-    ABC<int, 100> array;
-    
-    cout << sizeof(array);
-    
-    big_doll -> child = new Doll({
-        "green",
-        NULL
-    });
-    big_doll -> child -> child = new Doll({
-        "yellow",
-        NULL
-    });
-    big_doll -> child -> child = new Doll({
-        "blue",
-        NULL
-    });
-    countDoll(big_doll);
+    solution();
 }
 
 

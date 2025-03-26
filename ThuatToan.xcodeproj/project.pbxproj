@@ -25,6 +25,8 @@
 /* Begin PBXFileReference section */
 		993EF4FA2C6B6593003D839D /* ThuatToan */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ThuatToan; sourceTree = BUILT_PRODUCTS_DIR; };
 		993EF4FD2C6B6593003D839D /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		99CE897B2D9409120024E54D /* input.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = input.txt; sourceTree = "<group>"; };
+		99CE897C2D94098C0024E54D /* output.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = output.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,8 @@
 			isa = PBXGroup;
 			children = (
 				993EF4FD2C6B6593003D839D /* main.cpp */,
+				99CE897C2D94098C0024E54D /* output.txt */,
+				99CE897B2D9409120024E54D /* input.txt */,
 			);
 			path = ThuatToan;
 			sourceTree = "<group>";
